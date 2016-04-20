@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">OpenTools</string>
+    <string name="app_name_debug">D_OpenTools</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>
