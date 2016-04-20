@@ -43,4 +43,5 @@ dependencies {
     compile 'org.greenrobot:eventbus:3.0.0'
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
     compile 'com.google.code.gson:gson:2.6.1'
+    compile project(':jazzylistview')
 }
