@@ -23,6 +23,8 @@ public class MainAdapter extends BaseAdapter<Tool> {
         Tool t = data.get(position);
         TextView tvName = ViewHelper.get(convertView, R.id.tvName);
         tvName.setText(t.name);
+        TextView tvDesc = ViewHelper.get(convertView, R.id.tvDesc);
+        tvDesc.setText(t.desc);
         return convertView;
     }
 }

@@ -1,5 +1,6 @@
 package com.luowei.opentools;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -11,10 +12,13 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.google.gson.reflect.TypeToken;
 import com.luowei.opentools.entity.Tool;
+import com.luowei.opentools.test.TestListActivity;
+import com.luowei.opentools.utils.CommonUtil;
 import com.luowei.opentools.utils.JsonUtil;
 
 import java.io.InputStream;
@@ -42,8 +46,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+                startActivity(new Intent(getBaseContext(),TestListActivity.class));
             }
         });
 
@@ -130,5 +135,11 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            }
+        });
     }
 }

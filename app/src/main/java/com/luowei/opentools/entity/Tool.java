@@ -7,6 +7,7 @@ import java.io.Serializable;
  */
 public class Tool implements Serializable {
     public String name;
+    public String desc;
     public String intent;
     public String iamgeId;
 }

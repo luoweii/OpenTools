@@ -17,11 +17,17 @@ package com.luowei.jazzylistview;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.ViewPropertyAnimator;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.ListView;
 
 public class JazzyListView extends ListView {
-
     private final JazzyHelper mHelper;
+    private ViewPropertyAnimator animate;
+    private float lastY;
+    private int directionY;//标识滑动到底部或顶部
 
     public JazzyListView(Context context) {
         super(context);
@@ -42,6 +48,12 @@ public class JazzyListView extends ListView {
         JazzyHelper helper = new JazzyHelper(context, attrs);
         super.setOnScrollListener(helper);
         return helper;
+    }
+
+    @Override
+    protected void onFinishInflate() {
+        super.onFinishInflate();
+        animate = animate().setDuration(250).setInterpolator(new AccelerateDecelerateInterpolator());
     }
 
     @Override
@@ -91,7 +103,7 @@ public class JazzyListView extends ListView {
      * the list from animating under the users finger if they suddenly stop it.
      *
      * @param itemsPerSecond, set to JazzyHelper.MAX_VELOCITY_OFF to turn off max velocity.
-     *        While 13 is a good default, it is dependent on the size of your items.
+     *                        While 13 is a good default, it is dependent on the size of your items.
      */
     public void setMaxAnimationVelocity(int itemsPerSecond) {
         mHelper.setMaxAnimationVelocity(itemsPerSecond);
@@ -107,4 +119,38 @@ public class JazzyListView extends ListView {
         setClipChildren(!simulateGridWithList);
     }
 
+    @Override
+    public boolean onTouchEvent(MotionEvent ev) {
+        switch (ev.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                lastY = ev.getY();
+                break;
+            case MotionEvent.ACTION_MOVE:
+                if (directionY != 0) {
+                    setEnabled(false);
+                    if (directionY < 0) setPivotY(0);
+                    else setPivotY(getMeasuredHeight());
+                    setScaleY(Math.abs(ev.getY() - lastY) / (getMeasuredHeight() * 5) + 1f);
+//                        setScaleX(Math.abs(ev.getY()-lastY)/(getMeasuredHeight()*5)+1f);
+                }
+                break;
+            case MotionEvent.ACTION_UP:
+            case MotionEvent.ACTION_CANCEL:
+                if (directionY != 0) {
+                    animate.scaleY(1);
+//                    animate.scaleX(1);
+                    directionY = 0;
+                    setEnabled(true);
+                }
+                break;
+        }
+        return super.onTouchEvent(ev);
+    }
+
+    @Override
+    protected boolean overScrollBy(int deltaX, int deltaY, int scrollX, int scrollY, int scrollRangeX,
+                                   int scrollRangeY, int maxOverScrollX, int maxOverScrollY, boolean isTouchEvent) {
+        this.directionY = deltaY;
+        return super.overScrollBy(deltaX, deltaY, scrollX, scrollY, scrollRangeX, scrollRangeY, maxOverScrollX, maxOverScrollY, isTouchEvent);
+    }
 }

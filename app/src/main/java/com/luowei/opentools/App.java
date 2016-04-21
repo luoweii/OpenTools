@@ -22,16 +22,19 @@ public class App extends Application {
     //保存全局环境变量
     public static Map<Object, Object> maps;
     public static Context context;
+    private long breakTime;//崩溃时间
     private Thread.UncaughtExceptionHandler uncaughtExceptionHandler = new Thread.UncaughtExceptionHandler() {
         @Override
         public void uncaughtException(Thread thread, Throwable ex) {
             //保存友盟统计的数据
 //            MobclickAgent.onKillProcess(context);
             LogUtil.e("UNCAUGHTEXCEPTION, THREAD:" + thread.toString(), ex);
-//            重启程序
-            final Intent intent = getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            getApplicationContext().startActivity(intent);
+            if (System.currentTimeMillis() - breakTime > 5000) {
+//              重启程序
+                final Intent intent = getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                getApplicationContext().startActivity(intent);
+            }
 
             //退出程序
             android.os.Process.killProcess(android.os.Process.myPid());
@@ -42,7 +45,7 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
+        breakTime = System.currentTimeMillis();
         LogUtil.customTagPrefix = "OT";
         LogUtil.debug = BuildConfig.DEBUG;
         //处理未捕获的异常
