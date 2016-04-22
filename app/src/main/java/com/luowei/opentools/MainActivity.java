@@ -31,7 +31,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     @Bind(R.id.drawer_layout)
     DrawerLayout drawer;
     @Bind(R.id.listView)
-    ListView  listView;
+    ListView listView;
     private List<Tool> data = new ArrayList<>();
     private MainAdapter adapter = new MainAdapter();
 
@@ -48,7 +48,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             public void onClick(View view) {
 //                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                        .setAction("Action", null).show();
-                startActivity(new Intent(getBaseContext(),TestListActivity.class));
+                startActivity(new Intent(getBaseContext(), TestListActivity.class));
             }
         });
 
@@ -125,10 +125,11 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     private void initData() {
         try {
             InputStream is = getResources().openRawResource(R.raw.tools);
-            byte [] buffer = new byte[is.available()];
-            while (is.read(buffer) != -1);
+            byte[] buffer = new byte[is.available()];
+            while (is.read(buffer) != -1) ;
             String json = new String(buffer);
-            data = JsonUtil.fromJson(json,new TypeToken<List<Tool>>() { }.getType());
+            data = JsonUtil.fromJson(json, new TypeToken<List<Tool>>() {
+            }.getType());
             adapter.setData(data);
             listView.setAdapter(adapter);
 
@@ -139,6 +140,13 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                try {
+                    Tool t = adapter.getItem((int) id);
+                    startActivity(new Intent(getBaseContext(), Class.forName(t.intent))
+                    .putExtra(Constant.TOOL,t));
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
             }
         });
     }

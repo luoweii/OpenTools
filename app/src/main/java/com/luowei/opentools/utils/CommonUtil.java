@@ -2,6 +2,7 @@ package com.luowei.opentools.utils;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.telephony.TelephonyManager;
@@ -186,5 +187,13 @@ public class CommonUtil {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static void startActivity(Context context,String clazz) {
+        try {
+            context.startActivity(new Intent(context,Class.forName(clazz)));
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }

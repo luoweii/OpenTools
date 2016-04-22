@@ -3,6 +3,7 @@ package com.luowei.opentools;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 
 import com.luowei.opentools.utils.CommonUtil;
 import com.luowei.opentools.utils.LogUtil;
@@ -50,6 +51,14 @@ public class BaseActivity extends AppCompatActivity {
         if (eventBus.isRegistered(this))
             eventBus.unregister(this);
         LogUtil.i("--销毁界面-->> " + getClass().getSimpleName());
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (android.R.id.home == item.getItemId()) {
+            finish();
+        }
+        return true;
     }
 
     @Subscribe

@@ -19,6 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".test.TestListActivity" />
+        <activity android:name=".module.SameListActivity" />
+        <activity android:name=".module.Jazzylistview.ListViewActivity" />
     </application>
 
 </manifest>

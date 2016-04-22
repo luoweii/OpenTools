@@ -16,11 +16,17 @@
 package com.luowei.jazzylistview;
 
 import android.content.Context;
+import android.support.v4.view.animation.FastOutLinearInInterpolator;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.ViewPropertyAnimator;
 import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.AnticipateInterpolator;
+import android.view.animation.AnticipateOvershootInterpolator;
+import android.view.animation.BounceInterpolator;
+import android.view.animation.CycleInterpolator;
+import android.view.animation.OvershootInterpolator;
 import android.widget.ListView;
 
 public class JazzyListView extends ListView {
@@ -53,7 +59,9 @@ public class JazzyListView extends ListView {
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        animate = animate().setDuration(250).setInterpolator(new AccelerateDecelerateInterpolator());
+        animate = animate().setDuration(250)
+                .setInterpolator(new OvershootInterpolator());
+//                .setInterpolator(new AccelerateDecelerateInterpolator());
     }
 
     @Override
