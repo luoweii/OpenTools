@@ -18,6 +18,7 @@ import android.widget.ListView;
 import com.google.gson.reflect.TypeToken;
 import com.luowei.opentools.entity.Tool;
 import com.luowei.opentools.test.TestListActivity;
+import com.luowei.opentools.test.TestRippleActivity;
 import com.luowei.opentools.utils.CommonUtil;
 import com.luowei.opentools.utils.JsonUtil;
 
@@ -48,7 +49,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             public void onClick(View view) {
 //                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                        .setAction("Action", null).show();
-                startActivity(new Intent(getBaseContext(), TestListActivity.class));
+                startActivity(new Intent(getBaseContext(), TestRippleActivity.class));
             }
         });
 

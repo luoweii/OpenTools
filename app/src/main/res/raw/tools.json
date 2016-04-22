@@ -2,7 +2,8 @@
   {
     "name": "JazzyListView",
     "desc": "ListView滑动动画",
-    "imgId": "icon_weather",
+    "imgId": "jazzy_listview",
+    "intent": "com.luowei.opentools.module.SameListActivity",
     "children": [
       {
         "name": "ListView Example",
@@ -10,15 +11,29 @@
       },
       {
         "name": "GridView Example",
-        "intent": "opentools.intent.action.SAME_LIST_GRID"
+        "intent": "com.luowei.opentools.module.Jazzylistview.GridViewActivity"
+      },
+      {
+        "name": "RecyclerView List Example",
+        "intent": "com.luowei.opentools.module.Jazzylistview.RecyclerViewActivity",
+        "extra": "['jazzy_item',false]"
+      },
+      {
+        "name": "RecyclerView Grid Example",
+        "intent": "com.luowei.opentools.module.Jazzylistview.RecyclerViewActivity",
+        "extra": "['jazzy_grid_item',false]"
+      },
+      {
+        "name": "RecyclerView Staggered Grid Example",
+        "intent": "com.luowei.opentools.module.Jazzylistview.RecyclerViewActivity",
+        "extra": "['jazzy_grid_item',true]"
       }
-    ],
-    "intent": "com.luowei.opentools.module.SameListActivity"
+    ]
   },
   {
-    "name": "身份证查询",
-    "desc": "ListView滑动动画",
-    "imgId": "icon_idcard",
+    "name": "material-ripple",
+    "desc": "material-ripple点击效果",
+    "imgId": "material-ripple",
     "server": "http://apis.baidu.com/apistore/idservice/id",
     "intent": "tstore.intent.action.BAIDU_IDCARD"
   },

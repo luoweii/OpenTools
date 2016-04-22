@@ -3,9 +3,11 @@ package com.luowei.opentools;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.luowei.opentools.entity.Tool;
+import com.luowei.opentools.utils.ResUtil;
 import com.luowei.opentools.utils.ViewHelper;
 
 /**
@@ -25,6 +27,8 @@ public class MainAdapter extends BaseAdapter<Tool> {
         tvName.setText(t.name);
         TextView tvDesc = ViewHelper.get(convertView, R.id.tvDesc);
         tvDesc.setText(t.desc);
+        ImageView image = ViewHelper.get(convertView, R.id.imageView);
+        image.setImageResource(ResUtil.getId("drawable", t.imgId));
         return convertView;
     }
 }

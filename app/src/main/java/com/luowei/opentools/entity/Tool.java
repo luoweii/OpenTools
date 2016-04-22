@@ -10,6 +10,7 @@ public class Tool implements Serializable {
     public String name;
     public String desc;
     public String intent;
-    public String iamgeId;
+    public String imgId;
+    public String extra;
     public List<Tool> children;
 }

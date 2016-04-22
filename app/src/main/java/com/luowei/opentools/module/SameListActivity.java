@@ -40,7 +40,12 @@ public class SameListActivity extends BaseActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                CommonUtil.startActivity(SameListActivity.this,adapter.getItem((int) id).intent);
+                try {
+                    Tool t = adapter.getItem((int) id);
+                    startActivity(new Intent(getBaseContext(), Class.forName(t.intent)).putExtra(Constant.TOOL,t));
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
             }
         });
     }

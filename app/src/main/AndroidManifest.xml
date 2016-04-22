@@ -21,6 +21,9 @@
         <activity android:name=".test.TestListActivity" />
         <activity android:name=".module.SameListActivity" />
         <activity android:name=".module.Jazzylistview.ListViewActivity" />
+        <activity android:name=".module.Jazzylistview.GridViewActivity" />
+        <activity android:name=".module.Jazzylistview.RecyclerViewActivity" />
+        <activity android:name=".test.TestRippleActivity" />
     </application>
 
 </manifest>
