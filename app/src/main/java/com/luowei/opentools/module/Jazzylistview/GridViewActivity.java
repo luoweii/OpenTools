@@ -1,6 +1,5 @@
-package com.luowei.opentools.module.Jazzylistview;
+package com.luowei.opentools.module.jazzylistview;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;

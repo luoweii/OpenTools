@@ -13,9 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.luowei.opentools.module.Jazzylistview;
+package com.luowei.opentools.module.jazzylistview;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -30,7 +29,6 @@ import com.luowei.jazzylistview.JazzyHelper;
 import com.luowei.jazzylistview.JazzyRecyclerViewScrollListener;
 import com.luowei.opentools.BaseActivity;
 import com.luowei.opentools.Constant;
-import com.luowei.opentools.MainActivity;
 import com.luowei.opentools.R;
 import com.luowei.opentools.entity.Tool;
 import com.luowei.opentools.utils.ResUtil;

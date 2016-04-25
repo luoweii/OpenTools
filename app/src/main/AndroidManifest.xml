@@ -18,12 +18,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".test.TestListActivity" />
         <activity android:name=".module.SameListActivity" />
-        <activity android:name=".module.Jazzylistview.ListViewActivity" />
-        <activity android:name=".module.Jazzylistview.GridViewActivity" />
-        <activity android:name=".module.Jazzylistview.RecyclerViewActivity" />
+        <activity android:name=".module.jazzylistview.ListViewActivity" />
+        <activity android:name=".module.jazzylistview.GridViewActivity" />
+        <activity android:name=".module.jazzylistview.RecyclerViewActivity" />
+        <activity android:name=".module.materialripple.MaterialRippleActivity" />
+
+        <activity android:name=".test.TestListActivity" />
         <activity android:name=".test.TestRippleActivity" />
+
     </application>
 
 </manifest>
