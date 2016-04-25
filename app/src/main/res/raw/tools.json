@@ -7,25 +7,25 @@
     "children": [
       {
         "name": "ListView Example",
-        "intent": "com.luowei.opentools.module.Jazzylistview.ListViewActivity"
+        "intent": "com.luowei.opentools.module.jazzylistview.ListViewActivity"
       },
       {
         "name": "GridView Example",
-        "intent": "com.luowei.opentools.module.Jazzylistview.GridViewActivity"
+        "intent": "com.luowei.opentools.module.jazzylistview.GridViewActivity"
       },
       {
         "name": "RecyclerView List Example",
-        "intent": "com.luowei.opentools.module.Jazzylistview.RecyclerViewActivity",
+        "intent": "com.luowei.opentools.module.jazzylistview.RecyclerViewActivity",
         "extra": "['jazzy_item',false]"
       },
       {
         "name": "RecyclerView Grid Example",
-        "intent": "com.luowei.opentools.module.Jazzylistview.RecyclerViewActivity",
+        "intent": "com.luowei.opentools.module.jazzylistview.RecyclerViewActivity",
         "extra": "['jazzy_grid_item',false]"
       },
       {
         "name": "RecyclerView Staggered Grid Example",
-        "intent": "com.luowei.opentools.module.Jazzylistview.RecyclerViewActivity",
+        "intent": "com.luowei.opentools.module.jazzylistview.RecyclerViewActivity",
         "extra": "['jazzy_grid_item',true]"
       }
     ]
@@ -33,8 +33,7 @@
   {
     "name": "material-ripple",
     "desc": "material-ripple点击效果",
-    "imgId": "material-ripple",
-    "server": "http://apis.baidu.com/apistore/idservice/id",
+    "imgId": "ripple_ic",
     "intent": "com.luowei.opentools.module.materialripple.MaterialRippleActivity"
   },
   {

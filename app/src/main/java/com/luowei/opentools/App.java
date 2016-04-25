@@ -29,12 +29,12 @@ public class App extends Application {
             //保存友盟统计的数据
 //            MobclickAgent.onKillProcess(context);
             LogUtil.e("UNCAUGHTEXCEPTION, THREAD:" + thread.toString(), ex);
-            if (System.currentTimeMillis() - breakTime > 5000) {
-//              重启程序
-                final Intent intent = getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                getApplicationContext().startActivity(intent);
-            }
+//            if (System.currentTimeMillis() - breakTime > 5000) {
+////              重启程序
+//                final Intent intent = getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
+//                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                getApplicationContext().startActivity(intent);
+//            }
 
             //退出程序
             android.os.Process.killProcess(android.os.Process.myPid());
@@ -64,8 +64,8 @@ public class App extends Application {
                 .displayer(new FadeInBitmapDisplayer(300))
                 .resetViewBeforeLoading(true)
                 .bitmapConfig(Bitmap.Config.RGB_565).imageScaleType(ImageScaleType.EXACTLY)
-//                .showImageOnFail(R.drawable.ic_default_ring)
-//                .showImageForEmptyUri(R.drawable.ic_default_ring)
+                .showImageOnFail(R.mipmap.ic_launcher)
+                .showImageForEmptyUri(R.mipmap.ic_launcher)
                 .build();
 
         ImageLoaderConfiguration imageconfig = new ImageLoaderConfiguration

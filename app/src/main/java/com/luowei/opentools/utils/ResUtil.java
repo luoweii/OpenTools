@@ -18,13 +18,13 @@ public class ResUtil {
             Field idField = type.getField(name);
             return idField.getInt(name);
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
             try {
                 Class type = Class.forName(R.class.getName() + "$" + typeName);
                 Field idField = type.getField(name);
                 return idField.getInt(name);
             } catch (Exception e1) {
-                e1.printStackTrace();
+//                e1.printStackTrace();
             }
         }
         return 0;

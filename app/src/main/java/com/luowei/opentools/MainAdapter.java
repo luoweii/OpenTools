@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.luowei.opentools.entity.Tool;
 import com.luowei.opentools.utils.ResUtil;
 import com.luowei.opentools.utils.ViewHelper;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 /**
  * Created by 骆巍 on 2016/4/20.
@@ -28,7 +29,7 @@ public class MainAdapter extends BaseAdapter<Tool> {
         TextView tvDesc = ViewHelper.get(convertView, R.id.tvDesc);
         tvDesc.setText(t.desc);
         ImageView image = ViewHelper.get(convertView, R.id.imageView);
-        image.setImageResource(ResUtil.getId("drawable", t.imgId));
+        ImageLoader.getInstance().displayImage("drawable://"+ResUtil.getId("drawable", t.imgId),image);
         return convertView;
     }
 }

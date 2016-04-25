@@ -1,38 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <com.balysv.materialripple.MaterialRippleLayout
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="#ffff00"
-        app:mrl_rippleAlpha="0.2"
-        app:mrl_rippleColor="#585858"
-        app:mrl_rippleDelayClick="false"
-        app:mrl_rippleHover="true"
-        app:mrl_rippleOverlay="true">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#ffff00"
+            app:mrl_rippleAlpha="0.2"
+            app:mrl_rippleColor="#585858"
+            app:mrl_rippleDelayClick="false"
+            app:mrl_rippleHover="true"
+            app:mrl_rippleOverlay="true">
+
+            <Button
+                android:id="@+id/ripple_layout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/ripple_btn_selector"
+                android:text="Overlay with hover" />
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
 
         <Button
-            android:id="@+id/ripple_layout_1"
+            android:id="@+id/ripple_layout_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="20dp"
             android:background="@drawable/ripple_btn_selector"
-            android:text="Overlay with hover" />
-
-    </com.balysv.materialripple.MaterialRippleLayout>
+            android:text="Ripples static init" />
 
 
-    <Button
-        android:id="@+id/ripple_layout_2"
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#00ff00"
+            app:mrl_rippleAlpha="0.2"
+            app:mrl_rippleColor="#585858"
+            app:mrl_rippleDelayClick="true"
+            app:mrl_rippleHover="true"
+            app:mrl_rippleOverlay="true">
+
+            <Button
+                android:id="@+id/ripple_layout_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/ripple_btn_selector"
+                android:text="switch listview" />
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#00ffff"
+            app:mrl_rippleAlpha="0.2"
+            app:mrl_rippleColor="#585858"
+            app:mrl_rippleDelayClick="false"
+            app:mrl_rippleHover="true"
+            app:mrl_rippleOverlay="true">
+
+            <Button
+                android:id="@+id/ripple_layout_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/ripple_btn_selector"
+                android:text="switch recyclerview" />
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/flContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/ripple_btn_selector"
-        android:text="Ripples static init" />
-</LinearLayout>
+        android:layout_height="match_parent"></FrameLayout>
+</FrameLayout>
