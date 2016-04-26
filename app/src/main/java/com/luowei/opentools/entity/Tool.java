@@ -13,4 +13,5 @@ public class Tool implements Serializable {
     public String imgId;
     public String extra;
     public List<Tool> children;
+    public String url;
 }

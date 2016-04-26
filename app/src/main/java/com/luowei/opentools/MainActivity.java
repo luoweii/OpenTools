@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.google.gson.reflect.TypeToken;
 import com.luowei.opentools.entity.Tool;
@@ -148,6 +150,22 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 } catch (ClassNotFoundException e) {
                     e.printStackTrace();
                 }
+            }
+        });
+        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                int padding = (int) CommonUtil.dp2px(12);
+                TextView tv = new TextView(view.getContext());
+                tv.setTextIsSelectable(true);
+                tv.setTextSize(18);
+                tv.setPadding(padding,padding,padding,padding);
+                tv.setText(adapter.getItem((int) id).url);
+                new AlertDialog.Builder(MainActivity.this)
+                        .setView(tv)
+                        .setPositiveButton("确定", null)
+                        .show();
+                return true;
             }
         });
     }
