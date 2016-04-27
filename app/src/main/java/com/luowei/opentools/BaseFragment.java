@@ -82,4 +82,8 @@ public abstract class BaseFragment extends Fragment {
     public void onEvent(String msg) {
         CommonUtil.showToast(msg + " " + toString());
     }
+
+    public boolean onBackPressed() {
+        return false;
+    }
 }

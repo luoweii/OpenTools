@@ -2,7 +2,7 @@
   {
     "name": "JazzyListView",
     "desc": "ListView滑动动画",
-    "imgId": "jazzy_listview",
+    "imgId": "jazzy_ic",
     "intent": "com.luowei.opentools.module.SameListActivity",
     "url" : "https://github.com/twotoasters/JazzyListView",
     "children": [
@@ -41,8 +41,8 @@
   {
     "name": "Android-Universal-Image-Loader",
     "desc": "强大灵活的图片异步加载显示缓存工具",
-    "imgId": "imageloader_ic",
-    "intent": "tstore.intent.action.BAIDU_IPLOOKUP",
+    "imgId": "uil_ic",
+    "intent": "com.luowei.opentools.module.androiduniversalimageloader.SimpleImageActivity",
     "url" : "https://github.com/nostra13/Android-Universal-Image-Loader"
   },
   {

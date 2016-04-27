@@ -10,6 +10,7 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
+import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 
 import java.util.HashMap;
@@ -74,6 +75,7 @@ public class App extends Application {
                 .diskCacheSize(100 * 1024 * 1024)  // 100Mb
                 .threadPriority(Thread.NORM_PRIORITY - 2)
                 .defaultDisplayImageOptions(options)
+                .tasksProcessingOrder(QueueProcessingType.LIFO)
                 .denyCacheImageMultipleSizesInMemory().build();
         ImageLoader.getInstance().init(imageconfig);
     }

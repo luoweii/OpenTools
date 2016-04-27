@@ -2,9 +2,11 @@ package com.luowei.opentools;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import com.luowei.opentools.module.androiduniversalimageloader.ImageListFragment;
 import com.luowei.opentools.utils.CommonUtil;
 import com.luowei.opentools.utils.LogUtil;
 
@@ -56,13 +58,22 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (android.R.id.home == item.getItemId()) {
-            finish();
+            onBackPressed();
         }
-        return true;
+        return super.onOptionsItemSelected(item);
     }
 
     @Subscribe
     public void onEvent(String msg) {
         CommonUtil.showToast(msg + " " + toString());
     }
+
+    public void startFragment(Fragment fragment) {
+        getSupportFragmentManager().beginTransaction()
+                .setCustomAnimations(R.anim.push_up_in, R.anim.push_down_out, R.anim.push_up_in, R.anim.push_down_out)
+                .replace(R.id.flContainer,fragment)
+                .addToBackStack(null)
+                .commit();
+    }
+
 }

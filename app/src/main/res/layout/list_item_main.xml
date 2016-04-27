@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_vertical"
-        android:background="@drawable/bg_selector_list"
+        android:background="@drawable/bg_list_selector"
         android:padding="10dp">
 
         <ImageView

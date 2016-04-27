@@ -7,4 +7,6 @@
     <color name="lightgray">#eee</color>
     <color name="transparent">#00FFFFFF</color>
     <color name="transparent1">#10000000</color>
+    <color name="transparent1f">#1fff</color>
+    <color name="white">#fff</color>
 </resources>
