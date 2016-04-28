@@ -45,13 +45,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class ImageListFragment extends AbsListViewBaseFragment {
-    private static ImageListFragment fragment;
-
-    public static ImageListFragment getInstance() {
-        if (fragment == null) fragment = new ImageListFragment();
-        return fragment;
-    }
-
     @Override
     public int getLayout() {
         return R.layout.uil_fragment_image_list;
@@ -60,10 +53,11 @@ public class ImageListFragment extends AbsListViewBaseFragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        listView.setAdapter(new ImageAdapter(getActivity()));
+        listView.setAdapter(new ImageAdapter(getContext()));
         listView.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
                 startImagePagerFragment(position);
             }
         });
@@ -152,14 +146,5 @@ public class ImageListFragment extends AbsListViewBaseFragment {
                 }
             }
         }
-    }
-
-    @Override
-    public boolean onBackPressed() {
-        if (getChildFragmentManager().getBackStackEntryCount() > 0) {
-            getChildFragmentManager().popBackStack();
-            return true;
-        }
-        return false;
     }
 }

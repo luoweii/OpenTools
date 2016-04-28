@@ -25,16 +25,11 @@ import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListene
  * @author Sergey Tarasevich (nostra13[at]gmail[dot]com)
  */
 public class ImageGridFragment extends AbsListViewBaseFragment {
-	private static ImageGridFragment fragment;
-
-	public static ImageGridFragment getInstance() {
-		if (fragment == null) fragment = new ImageGridFragment();
-		return fragment;
-	}
-
 
 	@Override
 	public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
+
 		listView.setAdapter(new ImageAdapter(getActivity()));
 		listView.setOnItemClickListener(new OnItemClickListener() {
 			@Override
@@ -42,7 +37,6 @@ public class ImageGridFragment extends AbsListViewBaseFragment {
 				startImagePagerFragment(position);
 			}
 		});
-		super.onActivityCreated(savedInstanceState);
 	}
 
 	@Override

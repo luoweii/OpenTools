@@ -19,7 +19,7 @@ import butterknife.ButterKnife;
  */
 public abstract class BaseFragment extends Fragment {
     protected EventBus eventBus;
-    public View contentView;
+    public View rootView;
     public LayoutInflater inflater;
 
     @Override
@@ -33,9 +33,9 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        contentView = inflater.inflate(getLayout(), container, false);
-        ButterKnife.bind(this, contentView);
-        return contentView;
+        rootView = inflater.inflate(getLayout(), container, false);
+        ButterKnife.bind(this, rootView);
+        return rootView;
     }
 
     @Override

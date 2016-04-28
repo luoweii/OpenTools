@@ -1,9 +1,6 @@
 package com.luowei.opentools.module.androiduniversalimageloader;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.provider.SyncStateContract;
-import android.support.annotation.Nullable;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -43,28 +40,34 @@ public class SimpleImageActivity extends BaseActivity {
     }
 
     public void onImageListClick(View view) {
-        fragment = ImageListFragment.getInstance();
+        fragment = new ImageListFragment();
         startFragment(fragment);
     }
 
     public void onImageGridClick(View view) {
-        fragment = ImageGridFragment.getInstance();
+        fragment = new ImageGridFragment();
         startFragment(fragment);
     }
 
     public void onImagePagerClick(View view) {
+        fragment = new ImagePagerFragment();
+        startFragment(fragment);
     }
 
     public void onImageGalleryClick(View view) {
+        fragment = new ImageGalleryFragment();
+        startFragment(fragment);
     }
 
     public void onFragmentsClick(View view) {
+        fragment = new ComplexImageFragment();
+        startFragment(fragment);
     }
 
     @Override
     public void onBackPressed() {
         ImageLoader.getInstance().stop();
-        if (!fragment.onBackPressed()) super.onBackPressed();
+        if (fragment == null || !fragment.onBackPressed()) super.onBackPressed();
     }
 
     @Override

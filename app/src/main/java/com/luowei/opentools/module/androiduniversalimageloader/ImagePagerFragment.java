@@ -1,18 +1,3 @@
-/*******************************************************************************
- * Copyright 2011-2014 Sergey Tarasevich
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *******************************************************************************/
 package com.luowei.opentools.module.androiduniversalimageloader;
 
 import android.content.Context;
@@ -39,15 +24,11 @@ import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 
-/**
- * @author Sergey Tarasevich (nostra13[at]gmail[dot]com)
- */
+import butterknife.Bind;
+
 public class ImagePagerFragment extends BaseFragment {
-	private static ImagePagerFragment fragment;
-	public static ImagePagerFragment getInstance() {
-		if (fragment == null) fragment = new ImagePagerFragment();
-		return fragment;
-	}
+	@Bind(R.id.pager)
+	ViewPager pager;
 
 	@Override
 	public int getLayout() {
@@ -58,10 +39,12 @@ public class ImagePagerFragment extends BaseFragment {
 	public void onActivityCreated(@Nullable Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
 
-		ViewPager pager = (ViewPager) contentView.findViewById(R.id.viewPager);
 		pager.setAdapter(new ImageAdapter(getActivity()));
-		pager.setCurrentItem(getArguments().getInt(Constants.Extra.IMAGE_POSITION, 0));
-	}
+        try {
+            pager.setCurrentItem(getArguments().getInt(Constants.Extra.IMAGE_POSITION, 0));
+        } catch (Exception e) {
+        }
+    }
 
 	private static class ImageAdapter extends PagerAdapter {
 

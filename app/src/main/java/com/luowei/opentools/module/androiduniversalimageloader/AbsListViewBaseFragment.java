@@ -15,7 +15,6 @@
  *******************************************************************************/
 package com.luowei.opentools.module.androiduniversalimageloader;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.Menu;
@@ -83,13 +82,17 @@ public abstract class AbsListViewBaseFragment extends BaseFragment {
     }
 
     protected void startImagePagerFragment(int position) {
-        Fragment f = ImagePagerFragment.getInstance();
+        Fragment f = new ImagePagerFragment();
         Bundle b = new Bundle();
         b.putInt(Constants.Extra.IMAGE_POSITION, position);
         f.setArguments(b);
-        getChildFragmentManager().beginTransaction()
+        Fragment fragment = this;
+        if (getParentFragment() instanceof ComplexImageFragment) {
+            fragment = getParentFragment();
+        }
+        fragment.getFragmentManager().beginTransaction()
                 .setCustomAnimations(R.anim.push_up_in, R.anim.push_down_out, R.anim.push_up_in, R.anim.push_down_out)
-                .replace(R.id.flContainer, f)
+                .add(R.id.flContainer, f)
                 .addToBackStack(null)
                 .commit();
     }
