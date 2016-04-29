@@ -40,7 +40,7 @@ public class ImageGalleryFragment extends BaseFragment {
 				f.setArguments(b);
 				getFragmentManager().beginTransaction()
 						.setCustomAnimations(R.anim.push_up_in, R.anim.push_down_out, R.anim.push_up_in, R.anim.push_down_out)
-						.add(R.id.flContainer, f)
+						.add(android.R.id.content, f)
 						.addToBackStack(null)
 						.commit();
 			}

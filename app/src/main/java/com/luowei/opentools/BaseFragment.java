@@ -25,8 +25,6 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        eventBus = EventBus.getDefault();
-        eventBus.register(this);
         inflater = getLayoutInflater(savedInstanceState);
     }
 
@@ -35,6 +33,8 @@ public abstract class BaseFragment extends Fragment {
                              Bundle savedInstanceState) {
         rootView = inflater.inflate(getLayout(), container, false);
         ButterKnife.bind(this, rootView);
+        eventBus = EventBus.getDefault();
+        eventBus.register(this);
         return rootView;
     }
 
@@ -65,8 +65,8 @@ public abstract class BaseFragment extends Fragment {
     }
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
+    public void onDestroyView() {
+        super.onDestroyView();
         if (eventBus.isRegistered(this))
             eventBus.unregister(this);
     }

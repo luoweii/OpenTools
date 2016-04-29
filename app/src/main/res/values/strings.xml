@@ -55,4 +55,13 @@
     <string name="descr_image">Image</string>
     <!--androiduniversalimageloader-->
 
+    <!--Event Bus-->
+    <string-array name="spinnerThreadModes">
+        <item>POSTING</item>
+        <item>MAIN</item>
+        <item>BACKGROUND</item>
+        <item>ASYNC</item>
+    </string-array>
+    <!--Event Bus-->
+
 </resources>

@@ -46,25 +46,25 @@
     "url" : "https://github.com/nostra13/Android-Universal-Image-Loader"
   },
   {
-    "name": "股票查询",
-    "desc": "ListView滑动动画",
-    "imgId": "imageloader_ic",
-    "server": "http://apis.baidu.com/apistore/stockservice/stock",
-    "intent": "tstore.intent.action.BAIDU_STOCK"
+    "name": "EventBus",
+    "desc": "EventBus是发布和订阅事件的最佳选择",
+    "imgId": "eventbus_ic",
+    "intent": "com.luowei.opentools.module.eventbus.EventbusActivity",
+    "url": "https://github.com/greenrobot/EventBus"
   },
   {
-    "name": "在线分词服务",
-    "desc": "ListView滑动动画",
-    "imgId": "icon_pullword",
-    "server": "http://apis.baidu.com/apistore/pullword/words",
-    "intent": "tstore.intent.action.BAIDU_PULLWORD"
+    "name": "butterknife",
+    "desc": "绑定Android View 界面,自动注入View属性,回调click等事件",
+    "imgId": "butterknife_ic",
+    "url": "https://github.com/JakeWharton/butterknife",
+    "intent": "com.luowei.opentools.module.butterknife.SimpleActivity"
   },
   {
-    "name": "手机号码归属地查询",
-    "desc": "ListView滑动动画",
-    "imgId": "icon_phone_local",
-    "server": "http://apis.baidu.com/apistore/mobilephoneservice/mobilephone",
-    "intent": "tstore.intent.action.BAIDU_PHONE_LOCAL"
+    "name": "MPAndroidChart",
+    "desc": "一个强大的Android报表库,支持缩放,拖拽和动画",
+    "imgId": "mpa_ic",
+    "url": "https://github.com/PhilJay/MPAndroidChart",
+    "intent": "com.luowei.opentools.module.mpandroidchart.MPAActivity"
   },
   {
     "name": "百度OCR文字识别",

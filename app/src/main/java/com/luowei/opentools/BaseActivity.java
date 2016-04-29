@@ -24,6 +24,7 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (getSupportActionBar() != null) getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         LogUtil.i("--创建界面-->> " + getClass().getSimpleName());
         eventBus = EventBus.getDefault();
         eventBus.register(this);
@@ -71,7 +72,7 @@ public class BaseActivity extends AppCompatActivity {
     public void startFragment(Fragment fragment) {
         getSupportFragmentManager().beginTransaction()
                 .setCustomAnimations(R.anim.push_up_in, R.anim.push_down_out, R.anim.push_up_in, R.anim.push_down_out)
-                .replace(R.id.flContainer,fragment)
+                .replace(android.R.id.content,fragment)
                 .addToBackStack(null)
                 .commit();
     }

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
+import android.text.util.Linkify;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -146,7 +147,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 try {
                     Tool t = adapter.getItem((int) id);
                     startActivity(new Intent(getBaseContext(), Class.forName(t.intent))
-                    .putExtra(Constant.TOOL,t));
+                            .putExtra(Constant.TOOL, t));
                 } catch (ClassNotFoundException e) {
                     e.printStackTrace();
                 }
@@ -158,8 +159,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 int padding = (int) CommonUtil.dp2px(12);
                 TextView tv = new TextView(view.getContext());
                 tv.setTextIsSelectable(true);
+                tv.setAutoLinkMask(Linkify.ALL);
                 tv.setTextSize(18);
-                tv.setPadding(padding,padding,padding,padding);
+                tv.setPadding(padding, padding, padding, padding);
                 tv.setText(adapter.getItem((int) id).url);
                 new AlertDialog.Builder(MainActivity.this)
                         .setView(tv)
