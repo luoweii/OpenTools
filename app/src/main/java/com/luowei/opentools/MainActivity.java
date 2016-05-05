@@ -37,7 +37,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     @Bind(R.id.listView)
     ListView listView;
     private List<Tool> data = new ArrayList<>();
-    private MainAdapter adapter = new MainAdapter();
+    private MainAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,8 +134,14 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             String json = new String(buffer);
             data = JsonUtil.fromJson(json, new TypeToken<List<Tool>>() {
             }.getType());
-            adapter.setData(data);
+            adapter = new MainAdapter();
             listView.setAdapter(adapter);
+            listView.post(new Runnable() {
+                @Override
+                public void run() {
+                    adapter.setData(data);
+                }
+            });
 
         } catch (Exception e) {
             e.printStackTrace();

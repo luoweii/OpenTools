@@ -14,7 +14,7 @@ public abstract class BaseAdapter<T> extends android.widget.BaseAdapter {
     }
 
     public BaseAdapter(List<T> data) {
-        this.data = data;
+        if (data != null) this.data = data;
     }
 
     @Override

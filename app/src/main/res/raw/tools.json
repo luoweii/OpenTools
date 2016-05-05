@@ -4,7 +4,7 @@
     "desc": "ListView滑动动画",
     "imgId": "jazzy_ic",
     "intent": "com.luowei.opentools.module.SameListActivity",
-    "url" : "https://github.com/twotoasters/JazzyListView",
+    "url": "https://github.com/twotoasters/JazzyListView",
     "children": [
       {
         "name": "ListView Example",
@@ -36,14 +36,14 @@
     "desc": "material-ripple点击效果",
     "imgId": "ripple_ic",
     "intent": "com.luowei.opentools.module.materialripple.MaterialRippleActivity",
-    "url" : "https://github.com/balysv/material-ripple"
+    "url": "https://github.com/balysv/material-ripple"
   },
   {
     "name": "Android-Universal-Image-Loader",
     "desc": "强大灵活的图片异步加载显示缓存工具",
     "imgId": "uil_ic",
     "intent": "com.luowei.opentools.module.androiduniversalimageloader.SimpleImageActivity",
-    "url" : "https://github.com/nostra13/Android-Universal-Image-Loader"
+    "url": "https://github.com/nostra13/Android-Universal-Image-Loader"
   },
   {
     "name": "EventBus",
@@ -64,7 +64,149 @@
     "desc": "一个强大的Android报表库,支持缩放,拖拽和动画",
     "imgId": "mpa_ic",
     "url": "https://github.com/PhilJay/MPAndroidChart",
-    "intent": "com.luowei.opentools.module.mpandroidchart.MPAActivity"
+    "intent": "com.luowei.opentools.module.mpandroidchart.MPAActivity",
+    "children": [
+      {
+        "name": "Line Chart",
+        "desc": "A simple demonstration of the linechart.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.LineChartFragment"
+      },
+      {
+        "name": "Line Chart (Dual YAxis)",
+        "desc": "Demonstration of the linechart with dual y-axis.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.LineChartFragment2"
+      },
+      {
+        "name": "Bar Chart",
+        "desc": "A simple demonstration of the bar chart.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.BarChartFragment"
+      },
+      {
+        "name": "Horizontal Bar Chart",
+        "desc": "A simple demonstration of the horizontal bar chart.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.HorizontalBarChartFragment"
+      },
+      {
+        "name": "Combined Chart",
+        "desc": "Demonstrates how to create a combined chart (bar and line in this case).",
+        "intent": "com.luowei.opentools.module.mpandroidchart.CombinedChartFragment"
+      },
+      {
+        "name": "Pie Chart",
+        "desc": "A simple demonstration of the pie chart.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.PieChartFragment"
+      },
+      {
+        "name": "Scatter Chart",
+        "desc": "A simple demonstration of the scatter chart.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.ScatterChartFragment"
+      },
+      {
+        "name": "Bubble Chart",
+        "desc": "A simple demonstration of the bubble chart.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.BubbleChartFragment"
+      },
+      {
+        "name": "Stacked Bar Chart",
+        "desc": "A simple demonstration of a bar chart with stacked bars.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.StackedBarFragment"
+      },
+      {
+        "name": "Stacked Bar Chart Negative",
+        "desc": "A simple demonstration of stacked bars with negative and positive values.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.StackedBarNegativeFragment"
+      },
+      {
+        "name": "Another Bar Chart",
+        "desc": "Implementation of a BarChart that only shows values at the bottom.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.AnotherBarFragment"
+      },
+      {
+        "name": "Multiple Lines Chart",
+        "desc": "A line chart with multiple DataSet objects. One color per DataSet.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.MultiLineChartFragment"
+      },
+      {
+        "name": "Multiple Bars Chart",
+        "desc": "A bar chart with multiple DataSet objects. One multiple colors per DataSet.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.BarChartMultiDatasetFragment"
+      },
+      {
+        "name": "Charts in ViewPager Fragments",
+        "desc": "Demonstration of charts inside ViewPager Fragments. In this example the focus was on the design and look and feel of the chart.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.SimpleChartFragment"
+      },
+      {
+        "name": "BarChart inside ListView",
+        "desc": "Demonstrates the usage of a BarChart inside a ListView item.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.ListViewBarChartFragment"
+      },
+      {
+        "name": "Multiple charts inside ListView",
+        "desc": "Demonstrates the usage of different chart types inside a ListView.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.ListViewMultiChartFragment"
+      },
+      {
+        "name": "Inverted Line Chart",
+        "desc": "Demonstrates the feature of inverting the y-axis.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.InvertedLineChartFragment"
+      },
+      {
+        "name": "Candle Stick Chart",
+        "desc": "Demonstrates usage of the CandleStickChart.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.CandleStickChartFragment"
+      },
+      {
+        "name": "Cubic Line Chart",
+        "desc": "Demonstrates cubic lines in a LineChart.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.CubicLineChartFragment"
+      },
+      {
+        "name": "Radar Chart",
+        "desc": "Demonstrates the use of a spider-web like (net) chart.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.RadarChartFragment"
+      },
+      {
+        "name": "Colored Line Chart",
+        "desc": "Shows a LineChart with different background and line color.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.LineChartColoredFragment"
+      },
+      {
+        "name": "Realtime Chart",
+        "desc": "This chart is fed with new data in realtime. It also restrains the view on the x-axis.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.RealtimeLineChartFragment"
+      },
+      {
+        "name": "Dynamical data adding",
+        "desc": "This Activity demonstrates dynamical adding of Entries and DataSets (real time graph).",
+        "intent": "com.luowei.opentools.module.mpandroidchart.DynamicalAddingFragment"
+      },
+      {
+        "name": "Performance Line Chart",
+        "desc": "Renders up to 30.000 objects smoothly.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.PerformanceLineChartFragment"
+      },
+      {
+        "name": "Sinus Bar Chart",
+        "desc": "A Bar Chart plotting the sinus function with 8.000 values.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.BarChartSinusFragment"
+      },
+      {
+        "name": "Chart in ScrollView",
+        "desc": "This demonstrates how to use a chart inside a ScrollView.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.ScrollViewFragment"
+      },
+      {
+        "name": "BarChart positive / negative",
+        "desc": "This demonstrates how to create a BarChart with positive and negative values in different colors.",
+        "intent": "com.luowei.opentools.module.mpandroidchart.BarChartPositiveNegativeFragment"
+      },
+      {
+        "name": "Realm.io Database",
+        "desc": "This demonstrates how to use this library with Realm.io mobile database.",
+        "intent": ""
+      }
+    ]
   },
   {
     "name": "百度OCR文字识别",

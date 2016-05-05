@@ -45,4 +45,5 @@ dependencies {
     compile 'com.google.code.gson:gson:2.6.1'
     compile project(':jazzylistview')
     compile 'com.balysv:material-ripple:1.0.2'
+    compile 'com.github.PhilJay:MPAndroidChart:v2.2.4'
 }

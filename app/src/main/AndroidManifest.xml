@@ -29,7 +29,8 @@
         <activity android:name=".module.androiduniversalimageloader.SimpleImageActivity" />
         <activity android:name=".module.eventbus.EventbusActivity" />
         <activity android:name=".module.butterknife.SimpleActivity"/>
-        <activity android:name=".module.mpandroidchart.MPAActivity"/>
+        <activity android:name=".module.mpandroidchart.MPAActivity"
+            android:hardwareAccelerated="true"/>
 
         <activity android:name=".test.TestListActivity" />
         <activity android:name=".test.TestRippleActivity" />

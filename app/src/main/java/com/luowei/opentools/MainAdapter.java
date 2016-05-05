@@ -11,11 +11,19 @@ import com.luowei.opentools.utils.ResUtil;
 import com.luowei.opentools.utils.ViewHelper;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
+import java.util.List;
+
 /**
  * Created by 骆巍 on 2016/4/20.
  */
 public class MainAdapter extends BaseAdapter<Tool> {
     private LayoutInflater inflater;
+
+    public MainAdapter() {}
+
+    public MainAdapter(List<Tool> data) {
+        super(data);
+    }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
