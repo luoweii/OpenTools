@@ -46,4 +46,6 @@ dependencies {
     compile project(':jazzylistview')
     compile 'com.balysv:material-ripple:1.0.2'
     compile 'com.github.PhilJay:MPAndroidChart:v2.2.4'
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.5.3'
 }

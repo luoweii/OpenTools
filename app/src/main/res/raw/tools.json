@@ -209,11 +209,141 @@
     ]
   },
   {
-    "name": "百度OCR文字识别",
-    "desc": "ListView滑动动画",
-    "imgId": "icon_ocr",
-    "server": "http://apis.baidu.com/apistore/idlocr/ocr",
-    "intent": "tstore.intent.action.BAIDU_OCR"
+    "name": "android-async-http",
+    "desc": "一个异步的http访问库,基于Apache's HttpClient libraries",
+    "imgId": "asynchttp_ic",
+    "url": "https://github.com/loopj/android-async-http",
+    "intent": "com.luowei.opentools.module.asynchttp.AsynchttpActivity",
+    "children": [
+      {
+        "name": "GET",
+        "intent": "com.luowei.opentools.module.asynchttp.GetFragment"
+      },
+      {
+        "name": "POST",
+        "intent": "com.luowei.opentools.module.asynchttp.PostFragment"
+      },
+      {
+        "name": "DELETE",
+        "intent": "com.luowei.opentools.module.asynchttp.DeleteFragment"
+      },
+      {
+        "name": "PUT",
+        "intent": "com.luowei.opentools.module.asynchttp.PutFragment"
+      },
+      {
+        "name": "PATCH",
+        "intent": "com.luowei.opentools.module.asynchttp.PatchFragment"
+      },
+      {
+        "name": "HEAD",
+        "intent": "com.luowei.opentools.module.asynchttp.HeadFragment"
+      },
+      {
+        "name": "GET JSON and parse it",
+        "intent": "com.luowei.opentools.module.asynchttp.JsonFragment"
+      },
+      {
+        "name": "POST JSON using streamer",
+        "intent": "com.luowei.opentools.module.asynchttp.JsonStreamerFragment"
+      },
+      {
+        "name": "SAX Example",
+        "intent": "com.luowei.opentools.module.asynchttp.SaxFragment"
+      },
+      {
+        "name": "GET to File",
+        "intent": "com.luowei.opentools.module.asynchttp.FileSampleFragment"
+      },
+      {
+        "name": "GET to Directory",
+        "intent": "com.luowei.opentools.module.asynchttp.DirectoryFragment"
+      },
+      {
+        "name": "GET binary data",
+        "intent": "com.luowei.opentools.module.asynchttp.BinaryFragment"
+      },
+      {
+        "name": "GET Gzipped JSON and parse it",
+        "intent": "com.luowei.opentools.module.asynchttp.GzipFragment"
+      },
+      {
+        "name": "302 Redirect handling",
+        "intent": "com.luowei.opentools.module.asynchttp.Redirect302Fragment"
+      },
+      {
+        "name": "Threading timeouts",
+        "intent": "com.luowei.opentools.module.asynchttp.ThreadingTimeoutFragment"
+      },
+      {
+        "name": "Cancel all requests",
+        "intent": "com.luowei.opentools.module.asynchttp.CancelAllRequestsFragment"
+      },
+      {
+        "name": "Cancel request handle",
+        "intent": "com.luowei.opentools.module.asynchttp.CancelRequestHandleFragment"
+      },
+      {
+        "name": "Cancel by TAG",
+        "intent": "com.luowei.opentools.module.asynchttp.CancelRequestByTagFragment"
+      },
+      {
+        "name": "Synchronous GET request",
+        "intent": "com.luowei.opentools.module.asynchttp.SynchronousClientFragment"
+      },
+      {
+        "name": "IntentService Synchronised Request",
+        "intent": "com.luowei.opentools.module.asynchttp.IntentServiceFragment"
+      },
+      {
+        "name": "Post Multipart-encoded files",
+        "intent": "com.luowei.opentools.module.asynchttp.FilesFragment"
+      },
+      {
+        "name": "Handling persistent cookies",
+        "intent": "com.luowei.opentools.module.asynchttp.PersistentCookiesFragment"
+      },
+      {
+        "name": "Custom CA Example",
+        "intent": "com.luowei.opentools.module.asynchttp.CustomCAFragment"
+      },
+      {
+        "name": "Retrying requests by Exception",
+        "intent": "com.luowei.opentools.module.asynchttp.RetryRequestFragment"
+      },
+      {
+        "name": "Range response handling",
+        "intent": "com.luowei.opentools.module.asynchttp.RangeResponseFragment"
+      },
+      {
+        "name": "401 basic authentication",
+        "intent": "com.luowei.opentools.module.asynchttp.Http401AuthFragment"
+      },
+      {
+        "name": "Pre-/Post-processing",
+        "intent": "com.luowei.opentools.module.asynchttp.PrePostProcessingFragment"
+      },
+      {
+        "name": "Content-Type with HttpEntity",
+        "intent": "com.luowei.opentools.module.asynchttp.ContentTypeForHttpEntityFragment"
+      },
+      {
+        "name": "Resuming Download",
+        "intent": "com.luowei.opentools.module.asynchttp.ResumeDownloadFragment"
+      },
+      {
+        "name": "Digest Authentication",
+        "intent": "com.luowei.opentools.module.asynchttp.DigestAuthFragment"
+      },
+      {
+        "name": "Use Pool Thread in Response",
+        "intent": "com.luowei.opentools.module.asynchttp.UsePoolThreadFragment"
+      },
+      {
+        "name": "Request Params debug",
+        "intent": "com.luowei.opentools.module.asynchttp.RequestParamsFragment"
+      }
+    ]
   },
   {
     "name": "翻译",

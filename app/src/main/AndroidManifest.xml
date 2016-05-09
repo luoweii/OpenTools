@@ -31,6 +31,9 @@
         <activity android:name=".module.butterknife.SimpleActivity"/>
         <activity android:name=".module.mpandroidchart.MPAActivity"
             android:hardwareAccelerated="true"/>
+        <activity android:name=".module.asynchttp.AsynchttpActivity"
+            android:windowSoftInputMode="stateHidden"/>
+        <service android:name=".module.asynchttp.ExampleIntentService" />
 
         <activity android:name=".test.TestListActivity" />
         <activity android:name=".test.TestRippleActivity" />

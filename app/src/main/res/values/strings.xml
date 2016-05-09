@@ -64,4 +64,7 @@
     </string-array>
     <!--Event Bus-->
 
+    <!--asynchttp-->
+    <string name="asynchttp_label_credentials">Server requests authentication.\nTo gain access, enter:\n\nUsername: %1$s\nPassword: %2$s</string>
+    <!--asynchttp-->
 </resources>
