@@ -346,17 +346,17 @@
     ]
   },
   {
-    "name": "翻译",
-    "desc": "ListView滑动动画",
-    "imgId": "icon_dictionary",
-    "server": "http://apis.baidu.com/apistore/tranlateservice/dictionary",
-    "intent": "tstore.intent.action.BAIDU_DICTIONARY"
+    "name": "PhotoView",
+    "desc": "支持缩放和手势的ImageView",
+    "imgId": "photoview_ic",
+    "url": "https://github.com/chrisbanes/PhotoView",
+    "intent": "com.luowei.opentools.module.photoview.PhotoViewActivity"
   },
   {
-    "name": "汇率转换",
-    "desc": "ListView滑动动画",
-    "imgId": "icon_currency",
-    "server": "http://apis.baidu.com/apistore/currencyservice/type",
+    "name": "Android-ObservableScrollView",
+    "desc": "It's easy to interact with the Toolbar introduced in Android 5.0 Lollipop and may be helpful to implement look and feel of Material Design apps.",
+    "imgId": "aos_ic",
+    "url": "https://github.com/ksoichiro/Android-ObservableScrollView",
     "intent": "tstore.intent.action.BAIDU_CURRENCY"
   },
   {

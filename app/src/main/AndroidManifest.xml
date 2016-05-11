@@ -35,6 +35,8 @@
             android:windowSoftInputMode="stateHidden"/>
         <service android:name=".module.asynchttp.ExampleIntentService" />
 
+        <activity android:name=".module.photoview.PhotoViewActivity"/>
+
         <activity android:name=".test.TestListActivity" />
         <activity android:name=".test.TestRippleActivity" />
 

@@ -32,8 +32,12 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        rootView = inflater.inflate(getLayout(), container, false);
-        ButterKnife.bind(this, rootView);
+        try {
+            rootView = inflater.inflate(getLayout(), container, false);
+            ButterKnife.bind(this, rootView);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         eventBus = EventBus.getDefault();
         eventBus.register(this);
         return rootView;

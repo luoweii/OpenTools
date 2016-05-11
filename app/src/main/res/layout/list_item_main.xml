@@ -38,6 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tvName"
             android:layout_toRightOf="@id/imageView"
+            android:maxLines="3"
             android:textColor="#888"
             android:textSize="14sp"/>
     </RelativeLayout>
