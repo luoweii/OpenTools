@@ -41,7 +41,6 @@ public class SimpleSampleFragment extends BaseFragment {
     private PhotoViewAttacher mAttacher;
     private Toast mCurrentToast;
     private Matrix mCurrentDisplayMatrix = null;
-    private CharSequence activityTitle;
 
     @Override
     public int getLayout() {
@@ -51,9 +50,6 @@ public class SimpleSampleFragment extends BaseFragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        activityTitle = getActivity().getTitle();
-
-        getActivity().setTitle(getTitle());
 
         ImageView mImageView = (ImageView) rootView.findViewById(R.id.iv_photo);
         mCurrMatrixTv = (TextView) rootView.findViewById(R.id.tv_current_matrix);
@@ -214,11 +210,5 @@ public class SimpleSampleFragment extends BaseFragment {
             }
             return true;
         }
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        getActivity().setTitle(activityTitle);
     }
 }

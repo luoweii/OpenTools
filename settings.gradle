@@ -1,1 +1,1 @@
-include ':app', ':jazzylistview'
+include ':app', ':jazzylistview', ':cheesesquare', ':androidbootstrap'

@@ -353,42 +353,42 @@
     "intent": "com.luowei.opentools.module.photoview.PhotoViewActivity"
   },
   {
-    "name": "Android-ObservableScrollView",
-    "desc": "It's easy to interact with the Toolbar introduced in Android 5.0 Lollipop and may be helpful to implement look and feel of Material Design apps.",
-    "imgId": "aos_ic",
-    "url": "https://github.com/ksoichiro/Android-ObservableScrollView",
-    "intent": "tstore.intent.action.BAIDU_CURRENCY"
+    "name": "AndroidSwipeLayout",
+    "desc": "The Most Powerful Swipe Layout!",
+    "imgId": "swipelayout_ic",
+    "url": "https://github.com/daimajia/AndroidSwipeLayout",
+    "intent": "com.luowei.opentools.module.swipelayout.SwipeLayoutActivity"
+  },
+  {
+    "name": "cheesesquare",
+    "desc": "Demos the new Android Design library.",
+    "imgId": "cheesesquare_ic",
+    "url": "https://github.com/chrisbanes/cheesesquare",
+    "intent": "com.support.android.designlibdemo.MainActivity"
+  },
+  {
+    "name": "Android-Bootstrap",
+    "desc": "Bootstrap style widgets for Android, with Glyph Icons",
+    "imgId": "bootstrap_ic",
+    "url": "https://github.com/Bearded-Hen/Android-Bootstrap",
+    "intent": "com.fractalwrench.androidbootstrap.sample.HomeActivity"
+  },
+  {
+    "name": "Material-Animations",
+    "desc": "Android Transition animations explanation with examples.",
+    "imgId": "materialanimations_ic",
+    "url": "https://github.com/lgvalle/Material-Animations",
+    "intent": "tstore.intent.action.BAIDU_BELLE_IMAGE"
   },
   {
     "name": "去哪儿景点门票查询",
     "desc": "ListView滑动动画",
-    "imgId": "icon_qunaer_ticket",
-    "server": "http://apis.baidu.com/apistore/qunaerticket/querylist",
-    "intent": "tstore.intent.action.BAIDU_QUNAER_TICKET"
-  },
-  {
-    "name": "美女图片",
-    "desc": "ListView滑动动画",
     "imgId": "icon_belle_image",
     "server": "http://apis.baidu.com/txapi/mvtp/meinv",
     "intent": "tstore.intent.action.BAIDU_BELLE_IMAGE"
   },
   {
-    "name": "美女图片",
-    "desc": "ListView滑动动画",
-    "imgId": "icon_belle_image",
-    "server": "http://apis.baidu.com/txapi/mvtp/meinv",
-    "intent": "tstore.intent.action.BAIDU_BELLE_IMAGE"
-  },
-  {
-    "name": "美女图片",
-    "desc": "ListView滑动动画",
-    "imgId": "icon_belle_image",
-    "server": "http://apis.baidu.com/txapi/mvtp/meinv",
-    "intent": "tstore.intent.action.BAIDU_BELLE_IMAGE"
-  },
-  {
-    "name": "美女图片",
+    "name": "去哪儿景点门票查询",
     "desc": "ListView滑动动画",
     "imgId": "icon_belle_image",
     "server": "http://apis.baidu.com/txapi/mvtp/meinv",

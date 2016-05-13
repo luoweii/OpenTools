@@ -1,44 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.luowei.opentools">
+          package="com.luowei.opentools">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
+        xmlns:tools="http://schemas.android.com/tools"
         android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="${app_label}"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:replace="android:label">
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".module.SameListActivity" />
-        <activity android:name=".module.jazzylistview.ListViewActivity" />
-        <activity android:name=".module.jazzylistview.GridViewActivity" />
-        <activity android:name=".module.jazzylistview.RecyclerViewActivity" />
-        <activity android:name=".module.materialripple.MaterialRippleActivity" />
-        <activity android:name=".module.androiduniversalimageloader.SimpleImageActivity" />
-        <activity android:name=".module.eventbus.EventbusActivity" />
+        <activity android:name=".module.SameListActivity"/>
+        <activity android:name=".module.jazzylistview.ListViewActivity"/>
+        <activity android:name=".module.jazzylistview.GridViewActivity"/>
+        <activity android:name=".module.jazzylistview.RecyclerViewActivity"/>
+        <activity android:name=".module.materialripple.MaterialRippleActivity"/>
+        <activity android:name=".module.androiduniversalimageloader.SimpleImageActivity"/>
+        <activity android:name=".module.eventbus.EventbusActivity"/>
         <activity android:name=".module.butterknife.SimpleActivity"/>
-        <activity android:name=".module.mpandroidchart.MPAActivity"
+        <activity
+            android:name=".module.mpandroidchart.MPAActivity"
             android:hardwareAccelerated="true"/>
-        <activity android:name=".module.asynchttp.AsynchttpActivity"
+        <activity
+            android:name=".module.asynchttp.AsynchttpActivity"
             android:windowSoftInputMode="stateHidden"/>
-        <service android:name=".module.asynchttp.ExampleIntentService" />
+
+        <service android:name=".module.asynchttp.ExampleIntentService"/>
 
         <activity android:name=".module.photoview.PhotoViewActivity"/>
+        <activity android:name=".module.swipelayout.SwipeLayoutActivity"/>
 
-        <activity android:name=".test.TestListActivity" />
-        <activity android:name=".test.TestRippleActivity" />
+        <activity android:name=".test.TestListActivity"/>
+        <activity android:name=".test.TestRippleActivity"/>
+
+        <!--cheesesquare-->
+        <activity
+            android:name="com.support.android.designlibdemo.MainActivity"
+            android:theme="@style/Theme.DesignDemo">
+        </activity>
+
+        <activity
+            android:name="com.support.android.designlibdemo.CheeseDetailActivity"
+            android:parentActivityName="com.support.android.designlibdemo.MainActivity"
+            android:theme="@style/Theme.DesignDemo"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+        <activity android:name="com.support.android.designlibdemo.TextActivity"/>
+        <!--cheesesquare-->
+
+        <!--Android-Bootstrap-->
+        <activity android:name="com.fractalwrench.androidbootstrap.sample.HomeActivity"/>
+        <activity
+            android:name="com.fractalwrench.androidbootstrap.sample.BootstrapButtonExample"
+            android:label="BootstrapButton"
+            />
+        <activity
+            android:name="com.fractalwrench.androidbootstrap.sample.BootstrapLabelExample"
+            android:label="BootstrapLabel"
+            />
+        <activity
+            android:name="com.fractalwrench.androidbootstrap.sample.AwesomeTextViewExample"
+            android:label="AwesomeTextView"
+            />
+        <activity
+            android:name="com.fractalwrench.androidbootstrap.sample.BootstrapProgressBarExample"
+            android:label="BootstrapProgressBar"
+            />
+        <activity
+            android:name="com.fractalwrench.androidbootstrap.sample.BootstrapButtonGroupExample"
+            android:label="BootstrapButtonGroup"
+            />
+        <activity
+            android:name="com.fractalwrench.androidbootstrap.sample.BootstrapCircleThumbnailExample"
+            android:label="BootstrapCircleThumbnail"
+            />
+        <activity
+            android:name="com.fractalwrench.androidbootstrap.sample.BootstrapThumbnailExample"
+            android:label="BootstrapThumbnail"
+            />
+        <activity
+            android:name="com.fractalwrench.androidbootstrap.sample.BootstrapEditTextExample"
+            android:label="BootstrapEditTextExample"
+            />
+        <activity
+            android:name="com.fractalwrench.androidbootstrap.sample.BootstrapWellExample"
+            android:label="BootstrapWell"
+            />
+        <activity
+            android:name="com.fractalwrench.androidbootstrap.sample.BootstrapDropDownExample"
+            android:label="BootstrapDropDownExample"
+            />
+        <activity
+            android:name="com.fractalwrench.androidbootstrap.sample.BootstrapBadgeExample"
+            android:label="BootstrapBadgeExample"
+            />
+        <activity
+            android:name="com.fractalwrench.androidbootstrap.sample.BootstrapAlertExample"
+            android:label="BootstrapAlertExample"
+            />
+        <!--Android-Bootstrap-->
 
     </application>
 

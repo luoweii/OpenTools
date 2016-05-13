@@ -1,7 +1,9 @@
 package com.luowei.opentools;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,12 +23,23 @@ public abstract class BaseFragment extends Fragment {
     protected EventBus eventBus;
     public View rootView;
     public LayoutInflater inflater;
+    private CharSequence activityTitle;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         inflater = getLayoutInflater(savedInstanceState);
         setHasOptionsMenu(true);
+        setTitle(getTitle());
+    }
+
+    public CharSequence setTitle(CharSequence title) {
+        Activity activity = getActivity();
+        if (activity != null) {
+            activityTitle = activity.getTitle();
+            activity.setTitle(title);
+        }
+        return activityTitle;
     }
 
     @Override
@@ -44,10 +57,9 @@ public abstract class BaseFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
     }
-
 
     @Override
     public void onStart() {
@@ -74,6 +86,15 @@ public abstract class BaseFragment extends Fragment {
         super.onDestroyView();
         if (eventBus.isRegistered(this))
             eventBus.unregister(this);
+    }
+
+    @Override
+    public void onDestroy() {
+        Activity a = getActivity();
+        if (a != null && activityTitle != null) {
+            a.setTitle(activityTitle);
+        }
+        super.onDestroy();
     }
 
     public String getTitle() {

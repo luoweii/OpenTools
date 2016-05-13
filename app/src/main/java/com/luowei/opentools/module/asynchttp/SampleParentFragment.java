@@ -87,8 +87,6 @@ public abstract class SampleParentFragment extends BaseFragment implements Sampl
     private boolean useHttps = true;
     private boolean enableLogging = true;
 
-    protected CharSequence activityTitle;
-
     protected static String throwableToString(Throwable t) {
         if (t == null)
             return null;
@@ -111,9 +109,6 @@ public abstract class SampleParentFragment extends BaseFragment implements Sampl
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        activityTitle = getActivity().getTitle();
-        getActivity().setTitle(getTitle());
-
         urlEditText = (EditText) rootView.findViewById(R.id.edit_url);
         headersEditText = (EditText) rootView.findViewById(R.id.edit_headers);
         bodyEditText = (EditText) rootView.findViewById(R.id.edit_body);
@@ -380,9 +375,4 @@ public abstract class SampleParentFragment extends BaseFragment implements Sampl
         this.asyncHttpClient = client;
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        getActivity().setTitle(activityTitle);
-    }
 }

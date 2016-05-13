@@ -65,7 +65,6 @@ public class MaterialRippleActivity extends BaseActivity {
 //                .setCustomAnimations(android.R.anim.slide_in_left,android.R.anim.slide_out_right, android.R.anim.slide_in_left,android.R.anim.slide_out_right)
                 .replace(R.id.flContainer, RippleListViewFragment.getInstance())
                 .addToBackStack(null).commit();
-        setTitle(RippleListViewFragment.getInstance().getTitle());
     }
 
     @OnClick(R.id.ripple_layout_4)
@@ -74,7 +73,6 @@ public class MaterialRippleActivity extends BaseActivity {
                 .setCustomAnimations(R.anim.push_up_in, R.anim.push_down_out, R.anim.push_up_in, R.anim.push_down_out)
                 .replace(R.id.flContainer, RippleRecyclerFragment.getInstance())
                 .addToBackStack(null).commit();
-        setTitle(RippleRecyclerFragment.getInstance().getTitle());
     }
 
     @Override
