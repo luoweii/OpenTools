@@ -378,20 +378,41 @@
     "desc": "Android Transition animations explanation with examples.",
     "imgId": "materialanimations_ic",
     "url": "https://github.com/lgvalle/Material-Animations",
-    "intent": "tstore.intent.action.BAIDU_BELLE_IMAGE"
+    "intent": "com.lgvalle.material_animations.MainActivity"
   },
   {
-    "name": "去哪儿景点门票查询",
-    "desc": "ListView滑动动画",
-    "imgId": "icon_belle_image",
-    "server": "http://apis.baidu.com/txapi/mvtp/meinv",
-    "intent": "tstore.intent.action.BAIDU_BELLE_IMAGE"
+    "name": "AndroidViewAnimations",
+    "desc": "Cute view animation collection.",
+    "imgId": "viewanimations_ic",
+    "url": "https://github.com/daimajia/AndroidViewAnimations",
+    "intent": "com.daimajia.androidanimations.MyActivity"
   },
   {
-    "name": "去哪儿景点门票查询",
-    "desc": "ListView滑动动画",
-    "imgId": "icon_belle_image",
-    "server": "http://apis.baidu.com/txapi/mvtp/meinv",
-    "intent": "tstore.intent.action.BAIDU_BELLE_IMAGE"
+    "name": "android-Ultra-Pull-To-Refresh",
+    "desc": "Ultra Pull to Refresh for Android. Support all the views. http://android-ultra-ptr.liaohuqiu.net/",
+    "imgId": "ultrapulltorefresh_ic",
+    "url": "https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh",
+    "intent": "in.srain.cube.views.ptr.demo.ui.activity.PtrDemoHomeActivity"
+  },
+  {
+    "name": "ListViewAnimations",
+    "desc": "An Android library which allows developers to easily add animations to ListView items",
+    "imgId": "listviewanimations_ic",
+    "url": "https://github.com/nhaarman/ListViewAnimations",
+    "intent": "com.haarman.listviewanimations.MainActivity"
+  },
+  {
+    "name": "AndroidSlidingUpPanel",
+    "desc": "This library provides a simple way to add a draggable sliding up panel (popularized by Google Music and Google Maps) to your Android application. Brought to you by Umano. http://umano.me",
+    "imgId": "slidinguppanel_ic",
+    "url": "https://github.com/umano/AndroidSlidingUpPanel",
+    "intent": "com.sothree.slidinguppanel.demo.DemoActivity"
+  },
+  {
+    "name": "AppIntro",
+    "desc": "Make a cool intro for your Android app.",
+    "imgId": "appintro_ic",
+    "url": "https://github.com/PaoloRotolo/AppIntro",
+    "intent": "com.github.paolorotolo.appintroexample.MainActivity"
   }
 ]

@@ -32,6 +32,9 @@ android {
             signingConfig signingConfigs.luowei
         }
     }
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -56,4 +59,10 @@ dependencies {
     compile 'jp.wasabeef:recyclerview-animators:2.2.3'
     compile project(':cheesesquare')
     compile project(':androidbootstrap')
+    compile project(':materialanimations')
+    compile project(':androidviewanimations')
+    compile project(':ultrapulltorefresh')
+    compile project(':listviewanimations')
+    compile project(':androidslidinguppanel')
+    compile project(':appintro')
 }

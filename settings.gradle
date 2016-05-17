@@ -1,1 +1,1 @@
-include ':app', ':jazzylistview', ':cheesesquare', ':androidbootstrap'
+include ':app', ':jazzylistview', ':cheesesquare', ':androidbootstrap', ':materialanimations', ':androidviewanimations', ':ultrapulltorefresh', ':listviewanimations', ':androidslidinguppanel', ':appintro', ':appintrolib'

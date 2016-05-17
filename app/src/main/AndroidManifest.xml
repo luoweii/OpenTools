@@ -4,6 +4,11 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
 
     <application
         xmlns:tools="http://schemas.android.com/tools"
@@ -116,6 +121,145 @@
             />
         <!--Android-Bootstrap-->
 
-    </application>
+        <!--Material-Animations-->
+        <activity
+            android:name="com.lgvalle.material_animations.MainActivity"
+            android:theme="@style/MaterialAnimations">
+        </activity>
+        <activity
+            android:name="com.lgvalle.material_animations.TransitionActivity1"
+            android:theme="@style/MaterialAnimations.Red" />
+        <activity
+            android:name="com.lgvalle.material_animations.TransitionActivity2"
+            android:theme="@style/MaterialAnimations.Red" />
+        <activity
+            android:name="com.lgvalle.material_animations.TransitionActivity3"
+            android:theme="@style/MaterialAnimations.Red" />
+        <activity
+            android:name="com.lgvalle.material_animations.SharedElementActivity"
+            android:theme="@style/MaterialAnimations.Blue" />
 
+        <activity
+            android:name="com.lgvalle.material_animations.AnimationsActivity1"
+            android:theme="@style/MaterialAnimations.Green" />
+
+        <activity
+            android:name="com.lgvalle.material_animations.AnimationsActivity2"
+            android:theme="@style/MaterialAnimations.Green" />
+
+        <activity
+            android:name="com.lgvalle.material_animations.RevealActivity"
+            android:theme="@style/MaterialAnimations.Yellow" />
+<!--Material-Animations-->
+
+        <!--AndroidViewAnimations-->
+        <activity
+            android:name="com.daimajia.androidanimations.MyActivity">
+        </activity>
+        <activity android:name="com.daimajia.androidanimations.ExampleActivity"/>
+        <!--AndroidViewAnimations-->
+
+        <!--android-Ultra-Pull-To-Refresh-->
+        <activity android:name="in.srain.cube.views.ptr.demo.ui.activity.PtrDemoHomeActivity"
+                  android:theme="@style/CubeTheme.NoWindowAniAndNoTitle">
+        </activity>
+
+        <activity
+            android:name="in.srain.cube.views.ptr.demo.ui.viewpager.ViewPagerActivity"
+            android:theme="@style/CubeTheme.NoWindowAniAndNoTitle"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"></activity>
+        <!--android-Ultra-Pull-To-Refresh-->
+
+<!--ListViewAnimations-->
+        <activity android:name="com.haarman.listviewanimations.MainActivity">
+        </activity>
+        <activity
+            android:name="com.haarman.listviewanimations.appearance.AppearanceExamplesActivity"
+            android:label="@string/appearance" />
+        <activity
+            android:name="com.haarman.listviewanimations.googlecards.GoogleCardsActivity"
+            android:label="@string/googlecards" />
+        <activity
+            android:name="com.haarman.listviewanimations.itemmanipulation.ItemManipulationsExamplesActivity"
+            android:label="@string/itemmanipulation" />
+        <activity
+            android:name="com.haarman.listviewanimations.itemmanipulation.DynamicListViewActivity"
+            android:label="@string/dynamiclistview" />
+        <activity
+            android:name="com.haarman.listviewanimations.gridview.GridViewActivity"
+            android:label="@string/gridviewexample" />
+        <activity
+            android:name="com.haarman.listviewanimations.itemmanipulation.expandablelistitems.ExpandableListItemActivity"
+            android:label="@string/expandablelistitemadapter" />
+        <activity
+            android:name="com.haarman.listviewanimations.StickyListHeadersActivity"
+            android:label="@string/stickylistheaders" />
+    <!--ListViewAnimations-->
+
+<!--AndroidSlidingUpPanel-->
+    <activity
+        android:name="com.sothree.slidinguppanel.demo.DemoActivity"
+        android:theme="@style/AppThemeSlidinguppanel"/>
+<!--AndroidSlidingUpPanel-->
+
+<!--AppIntro-->
+        <activity
+            android:name="com.github.paolorotolo.appintroexample.MainActivity"
+            android:launchMode="singleTask">
+        </activity>
+        <activity
+            android:name="com.github.paolorotolo.appintroexample.DefaultIntro"
+            android:label="@string/title_activity_default_intro"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+        <activity
+            android:name="com.github.paolorotolo.appintroexample.CustomIntro"
+            android:label="@string/title_activity_custom_intro"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+        <activity
+            android:name="com.github.paolorotolo.appintroexample.PermissionsIntro"
+            android:label="@string/title_activity_permissions_intro"
+            android:theme="@style/FullscreenTheme"/>
+        <activity
+            android:name="com.github.paolorotolo.appintroexample.PermissionsIntro2"
+            android:label="@string/title_activity_permissions_intro"
+            android:theme="@style/FullscreenTheme"/>
+        <activity
+            android:name="com.github.paolorotolo.appintroexample.DefaultIntro2"
+            android:label="@string/title_activity_second_intro"
+            android:theme="@style/FullscreenTheme"/>
+        <activity
+            android:name="com.github.paolorotolo.appintroexample.DisableSwipeIntro1"
+            android:label="@string/title_activity_default_intro_disable"
+            android:theme="@style/FullscreenTheme"/>
+        <activity
+            android:name="com.github.paolorotolo.appintroexample.DisableSwipeIntro2"
+            android:label="@string/title_activity_second_intro_disable"
+            android:theme="@style/FullscreenTheme"/>
+        <activity android:name="com.github.paolorotolo.appintroexample.animations.CustomAnimation"/>
+        <activity android:name="com.github.paolorotolo.appintroexample.animations.FadeAnimation"/>
+        <activity android:name="com.github.paolorotolo.appintroexample.animations.ZoomAnimation"/>
+        <activity android:name="com.github.paolorotolo.appintroexample.animations.DepthAnimation"/>
+        <activity android:name="com.github.paolorotolo.appintroexample.animations.FlowAnimation"/>
+        <activity android:name="com.github.paolorotolo.appintroexample.animations.SlideOverAnimation"/>
+        <activity android:name="com.github.paolorotolo.appintroexample.animations.ColorAnimation"/>
+        <activity android:name="com.github.paolorotolo.appintroexample.indicators.ProgressIndicator"/>
+        <activity android:name="com.github.paolorotolo.appintroexample.indicators.CustomIndicator"/>
+        <activity android:name="com.github.paolorotolo.appintroexample.indicators.CustomColorIndicator"/>
+        <activity
+            android:name="com.github.paolorotolo.appintroexample.IntroWithBackground"
+            android:label="Intro with background"
+            android:theme="@style/FullscreenTheme"/>
+        <activity
+            android:name="com.github.paolorotolo.appintroexample.IntroDemoPolicy"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/FullscreenTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+        <!--AppIntro-->
+
+    </application>
 </manifest>
