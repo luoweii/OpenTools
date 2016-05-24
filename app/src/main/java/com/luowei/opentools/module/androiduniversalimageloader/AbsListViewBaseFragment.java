@@ -24,6 +24,7 @@ import android.widget.AbsListView;
 
 import com.luowei.opentools.BaseFragment;
 import com.luowei.opentools.R;
+import com.luowei.opentools.module.photoview.ViewPagerFragment;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.listener.PauseOnScrollListener;
 
