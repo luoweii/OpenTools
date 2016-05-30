@@ -1,1 +1,1 @@
-include ':app', ':jazzylistview', ':cheesesquare', ':androidbootstrap', ':materialanimations', ':androidviewanimations', ':ultrapulltorefresh', ':listviewanimations', ':androidslidinguppanel', ':appintro', ':appintrolib'
+include ':app', ':jazzylistview', ':cheesesquare', ':androidbootstrap', ':materialanimations', ':androidviewanimations', ':ultrapulltorefresh', ':listviewanimations', ':androidslidinguppanel', ':appintro', ':appintrolib', ':flexboxlayout', ':gpuimage'

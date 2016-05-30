@@ -65,4 +65,6 @@ dependencies {
     compile project(':listviewanimations')
     compile project(':androidslidinguppanel')
     compile project(':appintro')
+    compile project(':flexboxlayout')
+    compile project(':gpuimage')
 }

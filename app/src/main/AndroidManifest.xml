@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
 
     <application
@@ -260,6 +261,25 @@
                 android:value=".MainActivity"/>
         </activity>
         <!--AppIntro-->
+
+        <!--FlexboxLayout-->
+        <activity android:name="com.google.android.apps.flexbox.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.google.android.apps.flexbox.SettingsActivity"
+                  android:theme="@style/FlexBoxTheme"/>
+        <!--FlexboxLayout-->
+
+        <!--gpuimage-->
+        <activity
+            android:name="jp.co.cyberagent.android.gpuimage.sample.activity.ActivityMain"
+            android:label="@string/title_activity_activity_main" >
+        </activity>
+        <activity android:name="jp.co.cyberagent.android.gpuimage.sample.activity.ActivityGallery" />
+        <activity
+            android:name="jp.co.cyberagent.android.gpuimage.sample.activity.ActivityCamera"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--gpuimage-->
 
     </application>
 </manifest>

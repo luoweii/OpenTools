@@ -414,5 +414,19 @@
     "imgId": "appintro_ic",
     "url": "https://github.com/PaoloRotolo/AppIntro",
     "intent": "com.github.paolorotolo.appintroexample.MainActivity"
+  },
+  {
+    "name": "flexbox-layout",
+    "desc": "FlexboxLayout is a library project which brings the similar capabilities of CSS Flexible Box Layout Module to Android.",
+    "imgId": "flexbox_ic",
+    "url": "https://github.com/google/flexbox-layout",
+    "intent": "com.google.android.apps.flexbox.MainActivity"
+  },
+  {
+    "name": "android-gpuimage",
+    "desc": "Android filters based on OpenGL (idea from GPUImage for iOS)",
+    "imgId": "gpuimage_ic",
+    "url": "https://github.com/CyberAgent/android-gpuimage",
+    "intent": "jp.co.cyberagent.android.gpuimage.sample.activity.ActivityMain"
   }
 ]
