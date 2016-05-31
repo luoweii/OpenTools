@@ -463,5 +463,12 @@
     "imgId": "floatingactionbutton_ic",
     "url": "https://github.com/futuresimple/android-floating-action-button",
     "intent": "com.luowei.opentools.module.floatingactionbutton.MainActivity"
+  },
+  {
+    "name": "ExoPlayer",
+    "desc": "An extensible media player for Android",
+    "imgId": "exoplayer_ic",
+    "url": "https://github.com/google/ExoPlayer",
+    "intent": "com.google.android.exoplayer.demo.SampleChooserActivity"
   }
 ]
