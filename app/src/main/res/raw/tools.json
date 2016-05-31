@@ -428,5 +428,12 @@
     "imgId": "gpuimage_ic",
     "url": "https://github.com/CyberAgent/android-gpuimage",
     "intent": "jp.co.cyberagent.android.gpuimage.sample.activity.ActivityMain"
+  },
+  {
+    "name": "StickyListHeaders",
+    "desc": "An android library for section headers that stick to the top",
+    "imgId": "stickylistheaders_ic",
+    "url": "https://github.com/emilsjolander/StickyListHeaders",
+    "intent": "se.emilsjolander.stickylistheaders.sample.TestActivity"
   }
 ]

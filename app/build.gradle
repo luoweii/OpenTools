@@ -67,4 +67,5 @@ dependencies {
     compile project(':appintro')
     compile project(':flexboxlayout')
     compile project(':gpuimage')
+    compile project(':stickylistheaders')
 }
