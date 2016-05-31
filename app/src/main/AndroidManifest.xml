@@ -169,7 +169,7 @@
         <activity
             android:name="in.srain.cube.views.ptr.demo.ui.viewpager.ViewPagerActivity"
             android:theme="@style/CubeTheme.NoWindowAniAndNoTitle"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"></activity>
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
         <!--android-Ultra-Pull-To-Refresh-->
 
 <!--ListViewAnimations-->
@@ -303,5 +303,17 @@
             android:windowSoftInputMode="adjustPan">
         </activity>
         <!--material-->
+
+<!--recyclerview-animators-->
+        <activity
+            android:name="jp.wasabeef.example.recyclerview.MainActivity"
+            android:theme="@style/AppThemeRecyclerviewAnimators">
+        </activity>
+        <activity android:name="jp.wasabeef.example.recyclerview.AnimatorSampleActivity"
+                  android:theme="@style/AppThemeRecyclerviewAnimators"/>
+        <activity android:name="jp.wasabeef.example.recyclerview.AdapterSampleActivity"
+                  android:theme="@style/AppThemeRecyclerviewAnimators"/>
+        <!--recyclerview-animators-->
+
     </application>
 </manifest>

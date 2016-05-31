@@ -449,5 +449,12 @@
     "imgId": "material_ic",
     "url": "https://github.com/rey5137/material",
     "intent": "com.rey.material.demo.MainActivity"
+  },
+  {
+    "name": "recyclerview-animators",
+    "desc": "An Android Animation library which easily add itemanimator to RecyclerView items.",
+    "imgId": "recyclerviewanimators_ic",
+    "url": "https://github.com/wasabeef/recyclerview-animators",
+    "intent": "jp.wasabeef.example.recyclerview.MainActivity"
   }
 ]
