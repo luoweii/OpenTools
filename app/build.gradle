@@ -73,4 +73,5 @@ dependencies {
     compile 'de.hdodenhof:circleimageview:2.0.0'
     compile project(':material')
     compile project(':recyclerviewanimators')
+    compile 'com.getbase:floatingactionbutton:1.10.1'
 }

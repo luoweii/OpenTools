@@ -456,5 +456,12 @@
     "imgId": "recyclerviewanimators_ic",
     "url": "https://github.com/wasabeef/recyclerview-animators",
     "intent": "jp.wasabeef.example.recyclerview.MainActivity"
+  },
+  {
+    "name": "android-floating-action-button",
+    "desc": "Floating Action Button for Android based on Material Design specification",
+    "imgId": "floatingactionbutton_ic",
+    "url": "https://github.com/futuresimple/android-floating-action-button",
+    "intent": "com.luowei.opentools.module.floatingactionbutton.MainActivity"
   }
 ]

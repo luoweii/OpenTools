@@ -315,5 +315,10 @@
                   android:theme="@style/AppThemeRecyclerviewAnimators"/>
         <!--recyclerview-animators-->
 
+        <!--android-floating-action-button-->
+        <activity android:name=".module.floatingactionbutton.MainActivity"
+            android:theme="@style/ThemeFloatingActionButton"/>
+        <!--android-floating-action-button-->
+
     </application>
 </manifest>
