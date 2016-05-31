@@ -435,5 +435,19 @@
     "imgId": "stickylistheaders_ic",
     "url": "https://github.com/emilsjolander/StickyListHeaders",
     "intent": "se.emilsjolander.stickylistheaders.sample.TestActivity"
+  },
+  {
+    "name": "CircleImageView",
+    "desc": "A circular ImageView for Android",
+    "imgId": "hugh",
+    "url": "https://github.com/hdodenhof/CircleImageView",
+    "intent": "com.luowei.opentools.module.circleimageview.MainActivity"
+  },
+  {
+    "name": "material",
+    "desc": "A library to bring fully animated Material Design components to pre-Lolipop Android. http://rey5137.com/material/",
+    "imgId": "material_ic",
+    "url": "https://github.com/rey5137/material",
+    "intent": "com.rey.material.demo.MainActivity"
   }
 ]
