@@ -93,7 +93,7 @@ public abstract class AbsListViewBaseFragment extends BaseFragment {
         }
         fragment.getFragmentManager().beginTransaction()
                 .setCustomAnimations(R.anim.push_up_in, R.anim.push_down_out, R.anim.push_up_in, R.anim.push_down_out)
-                .add(R.id.flContainer, f)
+                .add(android.R.id.content, f)
                 .addToBackStack(null)
                 .commit();
     }
