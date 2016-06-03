@@ -470,5 +470,12 @@
     "imgId": "exoplayer_ic",
     "url": "https://github.com/google/ExoPlayer",
     "intent": "com.google.android.exoplayer.demo.SampleChooserActivity"
+  },
+  {
+    "name": "NineOldAndroids",
+    "desc": "[DEPRECATED] Android library for using the Honeycomb animation API on all versions of the platform back to 1.0! http://nineoldandroids.com",
+    "imgId": "nineoldandroids_ic",
+    "url": "https://github.com/JakeWharton/NineOldAndroids",
+    "intent": "com.jakewharton.nineoldandroids.sample.Demos"
   }
 ]
