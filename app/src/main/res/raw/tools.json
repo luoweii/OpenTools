@@ -477,5 +477,12 @@
     "imgId": "nineoldandroids_ic",
     "url": "https://github.com/JakeWharton/NineOldAndroids",
     "intent": "com.jakewharton.nineoldandroids.sample.Demos"
+  },
+  {
+    "name": "android-topeka",
+    "desc": "A fun to play quiz that showcases material design on Android",
+    "imgId": "topeka_ic",
+    "url": "https://github.com/googlesamples/android-topeka",
+    "intent": "com.google.samples.apps.topeka.activity.SignInActivity"
   }
 ]

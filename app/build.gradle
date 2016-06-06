@@ -76,4 +76,5 @@ dependencies {
     compile 'com.getbase:floatingactionbutton:1.10.1'
     compile project(':exoplayer')
     compile project(':nineoldandroids')
+    compile project(':topeka')
 }
